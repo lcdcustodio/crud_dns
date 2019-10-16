@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+{% load bootstrap %}
+
+{% block main %}
+
+
+            <ul>
+                {% for zone in zones %}
+
+                    <li>
+
+                        {{ zone.domain_name }}
+                        |
+                        {{ zone.primary_name_server }}
+                        |
+                        {{ zone.child_domain }}
+                        |
+                        {{ zone.parent_domain }}
+                       <a href="{% url 'zone_delete' zone.id %}">Delete</a>
+                    </li>
+
+
+                {% endfor %}
+            </ul>
+
+    </br>
+    <a href="{% url 'zone_new' %}">Novo Domínio</a>
+
+{% endblock %}

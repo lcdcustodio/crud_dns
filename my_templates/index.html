@@ -1,0 +1,148 @@
+{% extends 'base.html' %}
+{% load bootstrap %}
+
+{% block title %} CRUD DNS {% endblock %}
+
+{% block main %}
+
+  <div class="row">
+    <div class="col-sm-3">
+
+            	<ul class="list-group">
+					<li class="list-group-item bg-dark border-0">
+						<i class="fa fa-globe fa-fw text-white" aria-hidden="true"></i>
+						<a href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">globo.com</a>
+						<ul class="list-group">
+							<li class="list-group-item bg-dark border-0">
+								<i class="fa fa-globe fa-fw text-white" aria-hidden="true"></i>
+								<a href="#" class="text-white">dev.globo.com</a>
+							</li>
+							<li class="list-group-item bg-dark border-0">
+								<i class="fa fa-globe fa-fw text-white" aria-hidden="true"></i>
+								<a href="#" class="text-white">dev.globo.com</a>
+							</li>
+
+
+						</ul>
+
+					</li>
+
+            	<ul class="list-group">
+					<li class="list-group-item bg-dark border-0">
+						<i class="fa fa-globe fa-fw text-white" aria-hidden="true"></i>
+						<a href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">globo.com</a>
+						<ul class="list-group">
+							<li class="list-group-item bg-dark border-0">
+								<i class="fa fa-globe fa-fw text-white" aria-hidden="true"></i>
+								<a href="#" class="text-white">dev.globo.com</a>
+							</li>
+							<li class="list-group-item bg-dark border-0">
+								<i class="fa fa-globe fa-fw text-white" aria-hidden="true"></i>
+								<a href="#" class="text-white">dev.globo.com</a>
+							</li>
+
+
+						</ul>
+
+					</li>
+
+				</ul>
+
+
+
+    </div>
+    <div class="col-sm-8">
+
+          <div class="table-responsive">
+
+
+
+
+            <table class="table border border-secondary">
+               <thead class="thead-dark">
+                  <tr>
+                  <th style="width:30%">
+                  	Domain
+                  </th>
+                  <th style="width:30%">
+                    <a href="{% url 'create' %}"><i class="fa fa-plus fa-fw  text-white" aria-hidden="true"></i></a>
+                  	<i class="fa fa-edit fa-fw" aria-hidden="true"></i>
+                  	<i class="fa fa-trash fa-fw" aria-hidden="true"></i>
+
+                  </th>
+                  <th style="width:30%"></th>
+				  <th style="width:10%"></th>
+
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Name:</td>
+                  <td>globo.com</td>
+                  <td></td>
+                  <td></td>
+
+                </tr>
+                  <td>Primary name server:</td>
+                  <td>ns1.globo.com</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+              </tbody>
+            </table>
+
+          </div>
+
+          <h2 class="sub-header">Records</h2>
+          <div class="table-responsive">
+            <table class="table table-striped border border-secondary">
+               <thead class="thead-dark">
+                <tr>
+                  <th>Host</th>
+                  <th>Type</th>
+                  <th>Content</th>
+                  <th></th>
+
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>a</td>
+                  <td>A</td>
+                  <td>172.4.3.10</td>
+                  <td>
+                  	<i class="fa fa-edit fa-fw" aria-hidden="true"></i>
+                  	<i class="fa fa-trash fa-fw" aria-hidden="true"></i>
+                  </td>
+
+                </tr>
+                <tr>
+                  <td>a</td>
+                  <td>A</td>
+                  <td>172.4.3.10</td>
+                  <td>
+                  	<i class="fa fa-edit fa-fw" aria-hidden="true"></i>
+                  	<i class="fa fa-trash fa-fw" aria-hidden="true"></i>
+                  </td>
+
+                </tr>
+                <tr>
+                  <td>a</td>
+                  <td>A</td>
+                  <td>172.4.3.10</td>
+                  <td>
+                  	<i class="fa fa-edit fa-fw" aria-hidden="true"></i>
+                  	<i class="fa fa-trash fa-fw" aria-hidden="true"></i>
+                  </td>
+
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <button type="button" class="btn btn-dark">+ Add Record</button>
+
+    </div>
+
+  </div>
+
+{% endblock %}

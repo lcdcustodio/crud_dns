@@ -1,0 +1,106 @@
+{% extends 'base.html' %}
+{% load bootstrap %}
+
+{% block title %} New Domain {% endblock %}
+
+{% block main %}
+
+  <div class="row">
+    <div class="col-sm-3">
+
+            	<ul class="list-group" id="d_list">
+					<li class="list-group-item bg-dark border-0">
+						<i class="fa fa-globe fa-fw text-white" aria-hidden="true"></i>
+						<a href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">globo.com</a>
+						<ul class="list-group">
+							<li class="list-group-item bg-dark border-0">
+								<i class="fa fa-globe fa-fw text-white" aria-hidden="true"></i>
+								<a href="#" class="text-white">dev.globo.com</a>
+							</li>
+							<li class="list-group-item bg-dark border-0">
+								<i class="fa fa-globe fa-fw text-white" aria-hidden="true"></i>
+								<a href="#" class="text-white">dev.globo.com</a>
+							</li>
+
+
+						</ul>
+
+					</li>
+
+            	<ul class="list-group">
+					<li class="list-group-item bg-dark border-0">
+						<i class="fa fa-globe fa-fw text-white" aria-hidden="true"></i>
+						<a href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">globo.com</a>
+						<ul class="list-group">
+							<li class="list-group-item bg-dark border-0">
+								<i class="fa fa-globe fa-fw text-white" aria-hidden="true"></i>
+								<a href="#" class="text-white">dev.globo.com</a>
+							</li>
+							<li class="list-group-item bg-dark border-0">
+								<i class="fa fa-globe fa-fw text-white" aria-hidden="true"></i>
+								<a href="#" class="text-white">dev.globo.com</a>
+							</li>
+
+
+						</ul>
+
+					</li>
+
+				</ul>
+
+
+
+    </div>
+
+    <div class="col-sm-8">
+        <form method="POST" role="form" xmlns="http://www.w3.org/1999/html">
+            {% csrf_token %}
+          <div class="table-responsive">
+
+
+
+
+            <table class="table border border-secondary">
+               <thead class="thead-dark">
+                <tr>
+                  <th style="width:30%">
+                  	New Domain
+                  </th>
+                  <th  style="width:50%">
+
+                  </th>
+                  <th style="width:10%"></th>
+				  <th style="width:10%"></th>
+
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Name:</td>
+
+                  <td>
+                      <input  class="form-control" type="text" name="domain_name" placeholder="desafio.globo.com" value=""></td>
+
+                  </td>
+                  <td></td>
+                  <td></td>
+
+                </tr>
+              </tbody>
+            </table>
+          </div>
+            <div>
+                <button type="submit" class="btn btn-outline-dark btn-lg">Create</button>
+
+                <a href="{% url 'main' %}" class="btn btn-outline-danger btn-lg active" role="button">Cancel</a>
+
+            </div>
+        </form>
+
+    </div>
+
+  </div>
+
+
+
+{% endblock %}
