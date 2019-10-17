@@ -5,9 +5,9 @@ class Zone(models.Model):
     domain_name = models.CharField(max_length=30)
 
     primary_name_server = models.CharField(max_length=30) #e.g., ns1.globo.com
-    #--------------------
-    child_domain = models.CharField(max_length=30) #YES/NO REMOVE THIS FIELD
-    #--------------------
+    #---------------------------
+    child_domain = models.CharField(max_length=30) #TO BE REMOVED
+    #---------------------------
     parent_domain = models.CharField(max_length=30) #e.g. globo.com/NA
 
 

@@ -9,44 +9,27 @@
     <div class="col-sm-3">
 
             	<ul class="list-group">
+
 					<li class="list-group-item bg-dark border-0">
-						<i class="fa fa-globe fa-fw text-white" aria-hidden="true"></i>
-						<a href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">globo.com</a>
-						<ul class="list-group">
-							<li class="list-group-item bg-dark border-0">
-								<i class="fa fa-globe fa-fw text-white" aria-hidden="true"></i>
-								<a href="#" class="text-white">dev.globo.com</a>
-							</li>
-							<li class="list-group-item bg-dark border-0">
-								<i class="fa fa-globe fa-fw text-white" aria-hidden="true"></i>
-								<a href="#" class="text-white">dev.globo.com</a>
-							</li>
 
+                        {% for x2,x3 in maps.items %}
+                            <i class="fa fa-globe fa-fw text-white" aria-hidden="true"></i>
+                            <a href="#" onclick="popup()">{{ x2 }}</a>
+                            <ul class="list-group">
+                                {% for x4 in x3 %}
+                                    {% if x2 != x4 %}
+                                    <li class="list-group-item bg-dark border-0">
+                                        <i class="fa fa-globe fa-fw text-white" aria-hidden="true"></i>
+                                        <a href="#" onclick="popup()" class="text-white">{{ x4 }}</a>
+                                    </li>
+                                    {% endif %}
+                                {% endfor %}
 
-						</ul>
-
+                            </ul>
+                        {% endfor %}
 					</li>
 
-            	<ul class="list-group">
-					<li class="list-group-item bg-dark border-0">
-						<i class="fa fa-globe fa-fw text-white" aria-hidden="true"></i>
-						<a href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">globo.com</a>
-						<ul class="list-group">
-							<li class="list-group-item bg-dark border-0">
-								<i class="fa fa-globe fa-fw text-white" aria-hidden="true"></i>
-								<a href="#" class="text-white">dev.globo.com</a>
-							</li>
-							<li class="list-group-item bg-dark border-0">
-								<i class="fa fa-globe fa-fw text-white" aria-hidden="true"></i>
-								<a href="#" class="text-white">dev.globo.com</a>
-							</li>
 
-
-						</ul>
-
-					</li>
-
-				</ul>
 
 
 
@@ -66,8 +49,9 @@
                   </th>
                   <th style="width:30%">
                     <a href="{% url 'create' %}"><i class="fa fa-plus fa-fw  text-white" aria-hidden="true"></i></a>
-                  	<i class="fa fa-edit fa-fw" aria-hidden="true"></i>
-                  	<i class="fa fa-trash fa-fw" aria-hidden="true"></i>
+                    <a href="#"><i class="fa fa-edit fa-fw text-white" onclick="popup()" aria-hidden="true"></i></a>
+                  	<a href="{% url 'zone_list' %}" ><i class="fa fa-trash fa-fw text-white" aria-hidden="true"></i></a>
+
 
                   </th>
                   <th style="width:30%"></th>
@@ -111,8 +95,8 @@
                   <td>A</td>
                   <td>172.4.3.10</td>
                   <td>
-                  	<i class="fa fa-edit fa-fw" aria-hidden="true"></i>
-                  	<i class="fa fa-trash fa-fw" aria-hidden="true"></i>
+                  	<a href="#"><i class="fa fa-edit fa-fw" onclick="popup()" aria-hidden="true"></i></a>
+                  	<a href="#"><i class="fa fa-trash fa-fw" onclick="popup()" aria-hidden="true"></i></a>
                   </td>
 
                 </tr>
@@ -121,25 +105,28 @@
                   <td>A</td>
                   <td>172.4.3.10</td>
                   <td>
-                  	<i class="fa fa-edit fa-fw" aria-hidden="true"></i>
-                  	<i class="fa fa-trash fa-fw" aria-hidden="true"></i>
+
+                    <a href="#"><i class="fa fa-edit fa-fw" onclick="popup()" aria-hidden="true"></i></a>
+                  	<a href="#"><i class="fa fa-trash fa-fw" onclick="popup()" aria-hidden="true"></i></a>
                   </td>
 
                 </tr>
                 <tr>
                   <td>a</td>
                   <td>A</td>
-                  <td>172.4.3.10</td>
+                  <td>172.4.3.12</td>
                   <td>
-                  	<i class="fa fa-edit fa-fw" aria-hidden="true"></i>
-                  	<i class="fa fa-trash fa-fw" aria-hidden="true"></i>
+
+                    <a href="#"><i class="fa fa-edit fa-fw" onclick="popup()" aria-hidden="true"></i></a>
+                  	<a href="#"><i class="fa fa-trash fa-fw" onclick="popup()" aria-hidden="true"></i></a>
+
                   </td>
 
                 </tr>
               </tbody>
             </table>
           </div>
-          <button type="button" class="btn btn-dark">+ Add Record</button>
+          <button type="button" onclick="popup()" class="btn btn-dark">+ Add Record</button>
 
     </div>
 
